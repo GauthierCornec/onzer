@@ -7,23 +7,39 @@
 
 import UIKit
 
-class home: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class home: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var tableView: UITableView!
+    
+    struct Artiste {
+        let imageSon: String
+        let titleSon: String
+        let titleArtiste: String
+        let albumArtiste: String
     }
-    */
+    
+    let data: [Artiste] = [
+        Artiste(imageSon: "AppIcon", titleSon: "Au DD", titleArtiste: "PNL", albumArtiste: "Deux frères"),
+        Artiste(imageSon: "AppIcon", titleSon: "Autre monde", titleArtiste: "PNL", albumArtiste: "Deux frères"),
+        Artiste(imageSon: "AppIcon", titleSon: "Deux frères", titleArtiste: "PNL", albumArtiste: "Deux frères"),
+        Artiste(imageSon: "AppIcon", titleSon: "Déconnecté", titleArtiste: "PNL", albumArtiste: "Deux frères")
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "artisteCell", for: indexPath)
+        
+        return cell
+    }
 
 }

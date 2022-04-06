@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7784A93227FDB27B00153DA8 /* ArtisteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */; };
 		9388147627FC6003001A4E11 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388147527FC6003001A4E11 /* home.swift */; };
 		9388147827FC6170001A4E11 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388147727FC6170001A4E11 /* PlayerViewController.swift */; };
 		9388147A27FC61D8001A4E11 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388147927FC61D8001A4E11 /* AlbumViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisteTableViewCell.swift; sourceTree = "<group>"; };
 		9388147527FC6003001A4E11 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 		9388147727FC6170001A4E11 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		9388147927FC61D8001A4E11 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				ACCA65DE27FC399100A1C6C9 /* SceneDelegate.swift */,
 				ACCA65E027FC399100A1C6C9 /* ViewController.swift */,
 				ACCA65E227FC399100A1C6C9 /* Main.storyboard */,
+				7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */,
 				9388147D27FC62EC001A4E11 /* SearchViewController.swift */,
 				9388147927FC61D8001A4E11 /* AlbumViewController.swift */,
 				9388147727FC6170001A4E11 /* PlayerViewController.swift */,
@@ -154,6 +157,7 @@
 				9388147E27FC62EC001A4E11 /* SearchViewController.swift in Sources */,
 				ACCA65E127FC399100A1C6C9 /* ViewController.swift in Sources */,
 				ACCA65DD27FC399100A1C6C9 /* AppDelegate.swift in Sources */,
+				7784A93227FDB27B00153DA8 /* ArtisteTableViewCell.swift in Sources */,
 				9388147627FC6003001A4E11 /* home.swift in Sources */,
 				ACCA65DF27FC399100A1C6C9 /* SceneDelegate.swift in Sources */,
 				9388147827FC6170001A4E11 /* PlayerViewController.swift in Sources */,
