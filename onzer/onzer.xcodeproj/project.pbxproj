@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7784A93227FDB27B00153DA8 /* ArtisteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */; };
+		931B776B27FDDA0C00ED809F /* AlnumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B776A27FDDA0C00ED809F /* AlnumCell.swift */; };
+		931B776E27FDDA2300ED809F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B776C27FDDA2300ED809F /* AlbumTableViewCell.swift */; };
+		931B776F27FDDA2300ED809F /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B776D27FDDA2300ED809F /* AlbumTableViewController.swift */; };
 		9388147627FC6003001A4E11 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388147527FC6003001A4E11 /* home.swift */; };
 		9388147827FC6170001A4E11 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388147727FC6170001A4E11 /* PlayerViewController.swift */; };
 		9388147A27FC61D8001A4E11 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388147927FC61D8001A4E11 /* AlbumViewController.swift */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisteTableViewCell.swift; sourceTree = "<group>"; };
+		931B776A27FDDA0C00ED809F /* AlnumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlnumCell.swift; sourceTree = "<group>"; };
+		931B776C27FDDA2300ED809F /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		931B776D27FDDA2300ED809F /* AlbumTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
 		9388147527FC6003001A4E11 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 		9388147727FC6170001A4E11 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = Controller/PlayerViewController.swift; sourceTree = "<group>"; };
 		9388147927FC61D8001A4E11 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumViewController.swift; path = Controller/AlbumViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,9 @@
 				ACF54FE227FDBE6100FBA115 /* Controller */,
 				ACCA65E027FC399100A1C6C9 /* ViewController.swift */,
 				7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */,
+				931B776C27FDDA2300ED809F /* AlbumTableViewCell.swift */,
+				931B776D27FDDA2300ED809F /* AlbumTableViewController.swift */,
+				931B776A27FDDA0C00ED809F /* AlnumCell.swift */,
 				9388147D27FC62EC001A4E11 /* SearchViewController.swift */,
 				9388147927FC61D8001A4E11 /* AlbumViewController.swift */,
 				9388147727FC6170001A4E11 /* PlayerViewController.swift */,
@@ -165,7 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCA65F727FC7C6900A1C6C9 /* ApiManager.swift in Sources */,
+				931B776F27FDDA2300ED809F /* AlbumTableViewController.swift in Sources */,
+				931B776B27FDDA0C00ED809F /* AlnumCell.swift in Sources */,
 				9388147A27FC61D8001A4E11 /* AlbumViewController.swift in Sources */,
+				931B776E27FDDA2300ED809F /* AlbumTableViewCell.swift in Sources */,
 				9388147E27FC62EC001A4E11 /* SearchViewController.swift in Sources */,
 				ACCA65E127FC399100A1C6C9 /* ViewController.swift in Sources */,
 				ACCA65DD27FC399100A1C6C9 /* AppDelegate.swift in Sources */,
