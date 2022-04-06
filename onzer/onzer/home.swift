@@ -37,7 +37,12 @@ class home: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "artisteCell", for: indexPath)
+        let artiste = data[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "artisteCell", for: indexPath) as! ArtisteTableViewCell
+        cell.imageSon.image = UIImage(named: artiste.imageSon)
+        cell.titleSon.text = artiste.titleSon
+        cell.titleArtiste.text = artiste.titleArtiste
+        cell.albumArtiste.text = artiste.albumArtiste
         
         return cell
     }

@@ -121,7 +121,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="artisteCell" rowHeight="111" id="2mg-nU-gad">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="artisteCell" rowHeight="111" id="2mg-nU-gad" customClass="ArtisteTableViewCell" customModule="onzer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="384" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2mg-nU-gad" id="NVV-nU-445">
@@ -155,6 +155,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumArtiste" destination="eKx-4j-vul" id="1cL-hs-R7z"/>
+                                            <outlet property="imageSon" destination="Fug-EV-YYn" id="Hk3-IC-Kk2"/>
+                                            <outlet property="titleArtiste" destination="fZd-sH-RsW" id="6DY-Ui-Jqe"/>
+                                            <outlet property="titleSon" destination="EKC-Sm-hJt" id="EeT-nn-bt2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
