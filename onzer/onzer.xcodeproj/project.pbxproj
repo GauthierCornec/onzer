@@ -24,13 +24,13 @@
 /* Begin PBXFileReference section */
 		7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisteTableViewCell.swift; sourceTree = "<group>"; };
 		9388147527FC6003001A4E11 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
-		9388147727FC6170001A4E11 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		9388147927FC61D8001A4E11 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
-		9388147D27FC62EC001A4E11 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9388147727FC6170001A4E11 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = Controller/PlayerViewController.swift; sourceTree = "<group>"; };
+		9388147927FC61D8001A4E11 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumViewController.swift; path = Controller/AlbumViewController.swift; sourceTree = "<group>"; };
+		9388147D27FC62EC001A4E11 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Controller/SearchViewController.swift; sourceTree = "<group>"; };
 		ACCA65D927FC399100A1C6C9 /* onzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCA65DC27FC399100A1C6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCA65DE27FC399100A1C6C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACCA65E027FC399100A1C6C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACCA65E027FC399100A1C6C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
 		ACCA65E327FC399100A1C6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACCA65E527FC399400A1C6C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCA65E827FC399400A1C6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,17 +70,13 @@
 			children = (
 				ACCA65DC27FC399100A1C6C9 /* AppDelegate.swift */,
 				ACCA65DE27FC399100A1C6C9 /* SceneDelegate.swift */,
-
 				ACCA65F627FC7C6900A1C6C9 /* ApiManager.swift */,
 				ACF54FE227FDBE6100FBA115 /* Controller */,
-
 				ACCA65E027FC399100A1C6C9 /* ViewController.swift */,
-				ACCA65E227FC399100A1C6C9 /* Main.storyboard */,
 				7784A93127FDB27B00153DA8 /* ArtisteTableViewCell.swift */,
 				9388147D27FC62EC001A4E11 /* SearchViewController.swift */,
 				9388147927FC61D8001A4E11 /* AlbumViewController.swift */,
 				9388147727FC6170001A4E11 /* PlayerViewController.swift */,
-
 				ACCA65E527FC399400A1C6C9 /* Assets.xcassets */,
 				ACCA65E727FC399400A1C6C9 /* LaunchScreen.storyboard */,
 				ACCA65EA27FC399400A1C6C9 /* Info.plist */,
@@ -93,10 +89,6 @@
 		ACF54FE227FDBE6100FBA115 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ACCA65E027FC399100A1C6C9 /* ViewController.swift */,
-				9388147927FC61D8001A4E11 /* AlbumViewController.swift */,
-				9388147727FC6170001A4E11 /* PlayerViewController.swift */,
-				9388147D27FC62EC001A4E11 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
