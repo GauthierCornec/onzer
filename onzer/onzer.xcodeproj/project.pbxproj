@@ -17,6 +17,7 @@
 		ACCA65E427FC399100A1C6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCA65E227FC399100A1C6C9 /* Main.storyboard */; };
 		ACCA65E627FC399400A1C6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCA65E527FC399400A1C6C9 /* Assets.xcassets */; };
 		ACCA65E927FC399400A1C6C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCA65E727FC399400A1C6C9 /* LaunchScreen.storyboard */; };
+		ACCA65F727FC7C6900A1C6C9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA65F627FC7C6900A1C6C9 /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		ACCA65E527FC399400A1C6C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCA65E827FC399400A1C6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACCA65EA27FC399400A1C6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCA65F627FC7C6900A1C6C9 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = ../ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				ACCA65DE27FC399100A1C6C9 /* SceneDelegate.swift */,
 				ACCA65E027FC399100A1C6C9 /* ViewController.swift */,
 				ACCA65E227FC399100A1C6C9 /* Main.storyboard */,
+				ACCA65F627FC7C6900A1C6C9 /* ApiManager.swift */,
 				9388147D27FC62EC001A4E11 /* SearchViewController.swift */,
 				9388147927FC61D8001A4E11 /* AlbumViewController.swift */,
 				9388147727FC6170001A4E11 /* PlayerViewController.swift */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCA65F727FC7C6900A1C6C9 /* ApiManager.swift in Sources */,
 				9388147A27FC61D8001A4E11 /* AlbumViewController.swift in Sources */,
 				9388147E27FC62EC001A4E11 /* SearchViewController.swift in Sources */,
 				ACCA65E127FC399100A1C6C9 /* ViewController.swift in Sources */,
