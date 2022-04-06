@@ -13,5 +13,6 @@ class ArtisteTableViewCell: UITableViewCell {
     @IBOutlet weak var titleSon: UILabel!
     @IBOutlet weak var titleArtiste: UILabel!
     @IBOutlet weak var albumArtiste: UILabel!
+    
 
 }
