@@ -22,11 +22,64 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        fetchArtists(searchText: "iam") { data, error in
+            
+        }
     }
     
     let baseURL = "https://api.deezer.com/"
     var urlAlbum = "album/302127"
+    var artistsArray = [Artist]()
     
+    
+    func fetchArtists(searchText:String ,completion: @escaping (_ data : [Artist], _ error: Error?) -> Void){
+        let strUrl = "\(self.baseURL)search/artist?q=" + searchText
+        let url = URL(string: strUrl)!
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: url) {
+            (data, response, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "error")
+            } else {
+                if let json = try? JSONSerialization.jsonObject(with: data!, options: []){
+                    if let data = json as? [String:AnyObject] {
+                        let trueData = data["data"] as? [[String:AnyObject]]
+                        //print(trueData)
+                        for item in trueData! {
+                            let name = item["name"] as? String
+                            let id = item["id"] as? Int
+                            
+                            let artist = Artist(id: id!, name: name!)
+                            //print(artist)
+                            self.artistsArray.append(artist)
+                        }
+                        //print(artistsArray)
+                        completion(self.artistsArray, error)
+                        
+                    }
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("searchText \(searchText)")
+        
+        if searchText.count > 1 {
+            fetchArtists(searchText:searchText) { (data, error) in
+                //print(data)
+                self.artistsArray = data
+                print(self.artistsArray)
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+            }
+        }
+        
+    }
 
     func fetchAlbum(completionHandler: @escaping ([Album]) -> Void) {
         let url = URL(string:baseURL + urlAlbum)!
@@ -47,14 +100,14 @@ class SearchViewController: UIViewController {
             if let json = try? JSONSerialization.jsonObject(with: data!, options: []){
                 if let data = json as? [String:AnyObject] {
                     let trueData = data["data"] as? [[String:AnyObject]]
-                    print(trueData)
+//                    print(trueData)
                     for item in trueData! {
                         let name = item["name"] as? String
                         let id = item["id"] as? Int
                         
                         let album = Album(id: id!, name: name!)
                         print(album)
-//                        albumArray.append(album)
+                        albumArray.append(album)
                     }
                     print(albumArray)
 //                    url(albumArray, error)
