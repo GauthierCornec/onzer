@@ -68,18 +68,26 @@
 			children = (
 				ACCA65DC27FC399100A1C6C9 /* AppDelegate.swift */,
 				ACCA65DE27FC399100A1C6C9 /* SceneDelegate.swift */,
-				ACCA65E027FC399100A1C6C9 /* ViewController.swift */,
-				ACCA65E227FC399100A1C6C9 /* Main.storyboard */,
 				ACCA65F627FC7C6900A1C6C9 /* ApiManager.swift */,
-				9388147D27FC62EC001A4E11 /* SearchViewController.swift */,
-				9388147927FC61D8001A4E11 /* AlbumViewController.swift */,
-				9388147727FC6170001A4E11 /* PlayerViewController.swift */,
+				ACF54FE227FDBE6100FBA115 /* Controller */,
 				ACCA65E527FC399400A1C6C9 /* Assets.xcassets */,
 				ACCA65E727FC399400A1C6C9 /* LaunchScreen.storyboard */,
 				ACCA65EA27FC399400A1C6C9 /* Info.plist */,
 				9388147527FC6003001A4E11 /* home.swift */,
+				ACCA65E227FC399100A1C6C9 /* Main.storyboard */,
 			);
 			path = onzer;
+			sourceTree = "<group>";
+		};
+		ACF54FE227FDBE6100FBA115 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACCA65E027FC399100A1C6C9 /* ViewController.swift */,
+				9388147927FC61D8001A4E11 /* AlbumViewController.swift */,
+				9388147727FC6170001A4E11 /* PlayerViewController.swift */,
+				9388147D27FC62EC001A4E11 /* SearchViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
