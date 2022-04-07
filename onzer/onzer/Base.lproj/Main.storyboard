@@ -100,38 +100,40 @@
                                                         <constraint firstAttribute="width" constant="110" id="BcH-fC-Qaa"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITRE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKC-Sm-hJt">
-                                                    <rect key="frame" x="139" y="42" width="151" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artiste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZd-sH-RsW">
-                                                    <rect key="frame" x="139" y="87" width="51" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artiste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZd-sH-RsW">
+                                                    <rect key="frame" x="139" y="64" width="147" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKx-4j-vul">
-                                                    <rect key="frame" x="241" y="87" width="49" height="21"/>
+                                                    <rect key="frame" x="139" y="97" width="147" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="147" id="JaM-lE-Xsn"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre du son" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKC-Sm-hJt">
+                                                    <rect key="frame" x="139" y="35" width="147" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="eKx-4j-vul" secondAttribute="bottom" constant="42" id="5m6-ar-E9O"/>
+                                                <constraint firstItem="fZd-sH-RsW" firstAttribute="leading" secondItem="Fug-EV-YYn" secondAttribute="trailing" constant="17" id="1Mo-jK-DXi"/>
+                                                <constraint firstAttribute="bottom" secondItem="eKx-4j-vul" secondAttribute="bottom" constant="32" id="5m6-ar-E9O"/>
                                                 <constraint firstItem="Fug-EV-YYn" firstAttribute="top" secondItem="NVV-nU-445" secondAttribute="topMargin" constant="9" id="5pu-fs-xYG"/>
                                                 <constraint firstItem="Fug-EV-YYn" firstAttribute="leading" secondItem="NVV-nU-445" secondAttribute="leading" constant="12" id="DUi-RH-Ux9"/>
                                                 <constraint firstItem="Fug-EV-YYn" firstAttribute="centerY" secondItem="NVV-nU-445" secondAttribute="centerY" id="QwH-0Z-cWi"/>
-                                                <constraint firstItem="fZd-sH-RsW" firstAttribute="leading" secondItem="Fug-EV-YYn" secondAttribute="leading" constant="127" id="Sac-0o-ClV"/>
-                                                <constraint firstAttribute="bottom" secondItem="fZd-sH-RsW" secondAttribute="bottom" constant="42" id="UmA-mL-JZT"/>
-                                                <constraint firstAttribute="trailing" secondItem="EKC-Sm-hJt" secondAttribute="trailing" constant="94" id="Z5c-ka-ZKT"/>
-                                                <constraint firstAttribute="trailing" secondItem="eKx-4j-vul" secondAttribute="trailing" constant="94" id="hGz-g0-m89"/>
-                                                <constraint firstItem="EKC-Sm-hJt" firstAttribute="leading" secondItem="NVV-nU-445" secondAttribute="leading" constant="139" id="o8n-DI-Ggu"/>
-                                                <constraint firstAttribute="trailing" secondItem="fZd-sH-RsW" secondAttribute="trailing" constant="194" id="ucp-ec-6xi"/>
-                                                <constraint firstItem="EKC-Sm-hJt" firstAttribute="top" secondItem="NVV-nU-445" secondAttribute="top" constant="42" id="wDt-h8-5B2"/>
+                                                <constraint firstAttribute="trailing" secondItem="EKC-Sm-hJt" secondAttribute="trailing" constant="98" id="Z5c-ka-ZKT"/>
+                                                <constraint firstAttribute="trailing" secondItem="eKx-4j-vul" secondAttribute="trailing" constant="98" id="hGz-g0-m89"/>
+                                                <constraint firstItem="EKC-Sm-hJt" firstAttribute="leading" secondItem="Fug-EV-YYn" secondAttribute="trailing" constant="17" id="jBl-WR-wvj"/>
+                                                <constraint firstItem="fZd-sH-RsW" firstAttribute="centerY" secondItem="NVV-nU-445" secondAttribute="centerY" id="w2K-g7-u8i"/>
+                                                <constraint firstItem="EKC-Sm-hJt" firstAttribute="top" secondItem="NVV-nU-445" secondAttribute="top" constant="35" id="wDt-h8-5B2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

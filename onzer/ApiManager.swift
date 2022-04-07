@@ -6,12 +6,22 @@
 //
 
 import Foundation
+import UIKit
 
 class ApiManager {
     
     let baseURL = "https://api.deezer.com/"
     var urlAlbum = "album/302127"
     var artistsArray = [Artist]()
+    
+    func getImageFromUrl(urlStr: String) -> UIImage {
+        let url = URL(string: urlStr)
+        var image = UIImage(named: "test")
+        if let data = try? Data(contentsOf: url!) {
+            image = UIImage(data: data)
+        }
+        return image!
+    }
 
     func fetchTracksFromArtists(searchText: String ,completion: @escaping (_ data : [Song], _ error: Error?) -> Void){
         var tracksArray = [Song]()
@@ -31,8 +41,11 @@ class ApiManager {
                         for item in trueData! {
                             let preview = item["preview"] as? String
                             let title = item["title"] as? String
+                            let artistName = item["artist"]?["name"] as? String
+                            let albumImage = item["album"]?["cover"] as? String
+                            let albumName = item["album"]?["title"] as? String
                             
-                            let song = Song(preview: preview!, title: title!)
+                            let song = Song(preview: preview!, title: title!, artistName: artistName!, albumImage: albumImage!, albumName: albumName!)
                             tracksArray.append(song)
                         }
                         //print(artistsArray)
@@ -134,8 +147,11 @@ class ApiManager {
                                 for item in tracksData {
                                     let preview = item["preview"] as? String
                                     let title = item["title"] as? String
+                                    let artistName = item["artist"]?["name"] as? String
+                                    let albumImage = item["album"]?["cover"] as? String
+                                    let albumName = item["album"]?["title"] as? String
                                     
-                                    let song = Song(preview: preview!, title: title!)
+                                    let song = Song(preview: preview!, title: title!, artistName: artistName!, albumImage: albumImage!, albumName: albumName!)
                                     tracksArray.append(song)
 
                                 }
@@ -168,4 +184,7 @@ struct Artist {
 struct Song {
     var preview: String
     var title: String
+    var artistName: String
+    var albumImage: String
+    var albumName: String
 }

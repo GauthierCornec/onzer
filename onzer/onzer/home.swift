@@ -30,9 +30,8 @@ class home: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
-        ApiManager().fetchTracksFromArtists(searchText: "pnl") { data, error in
+        ApiManager().fetchTracksFromArtists(searchText: "sexion%20d%27assaut") { data, error in
             self.data = data
-            print(data)
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -47,10 +46,10 @@ class home: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let song = data[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "artisteCell", for: indexPath) as! ArtisteTableViewCell
-        cell.imageSon.image = UIImage(named: "AppIcon")
+        cell.imageSon.image = ApiManager().getImageFromUrl(urlStr: song.albumImage)
         cell.titleSon.text = song.title
-        cell.titleArtiste.text = song.title
-        cell.albumArtiste.text = song.title
+        cell.titleArtiste.text = song.artistName
+        cell.albumArtiste.text = song.albumName
         
         return cell
     }
