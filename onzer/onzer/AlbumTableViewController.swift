@@ -2,7 +2,7 @@
 //  AlbumTableViewController.swift
 //  onzer
 //
-//  Created by Alexis Majchrzak on 06/04/2022.
+//  Created by Merwan Laouini on 06/04/2022.
 //
 
 import UIKit
