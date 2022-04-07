@@ -150,10 +150,8 @@ class ApiManager {
                                     let preview = item["preview"] as? String
                                     let title = item["title"] as? String
                                     let artistName = item["artist"]?["name"] as? String
-                                    let albumImage = item["album"]?["cover"] as? String
-                                    let albumName = item["album"]?["title"] as? String
                                     
-                                    let song = Song(preview: preview!, title: title!, artistName: artistName!, albumImage: albumImage!, albumName: albumName!)
+                                    let song = Song(preview: preview!, title: title!, artistName: artistName!, albumImage: data["title"] as! String, albumName: "")
                                     tracksArray.append(song)
 
                                 }

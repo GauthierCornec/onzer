@@ -49,5 +49,18 @@ class ArtistViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlbumController") as? AlbumTableViewController {
+            
+            vc.albumVariableName = albums[indexPath.row].name
+            vc.albumVariableId = albums[indexPath.row].id
+
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
 
 }

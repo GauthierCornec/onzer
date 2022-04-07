@@ -22,12 +22,25 @@ class TestSong{
 
 class AlbumTableViewController: UITableViewController {
     
-    let data: [TestSong] = [TestSong(from: "Sundance", Album: "Adios Bahamas"),TestSong(from: "En face", Album: "Adios Bahamas"),TestSong(from: "vibe", Album: "Adios Bahamas"),TestSong(from: "Daruma", Album: "Adios Bahamas")]
-
+    @IBOutlet var tableViewTracks: UITableView!
+    
+    public var albumVariableName: String = ""
+    public var albumVariableId: Int = 0
+    var data: [Song] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+        tableViewTracks.delegate = self
+        tableViewTracks.dataSource = self
+        
+        ApiManager().fetchTracksFromAlbumId(id: self.albumVariableId) { data, error in
+            self.data = data
+            
+            DispatchQueue.main.async {
+                self.tableViewTracks.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -45,8 +58,7 @@ class AlbumTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:  "SongCell") as! AlnumCell
         
-        cell.SongName.text = data[indexPath.row].Songname
-        cell.AlbumName.text = data[indexPath.row].Albumname
+        cell.SongName.text = data[indexPath.row].title
         
         
         return cell

@@ -10,7 +10,7 @@ import UIKit
 class AlnumCell: UITableViewCell {
     
     @IBOutlet weak var SongName: UILabel!
-    @IBOutlet weak var AlbumName: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
