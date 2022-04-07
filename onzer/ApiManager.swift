@@ -75,8 +75,10 @@ class ApiManager {
                         for item in trueData! {
                             let name = item["name"] as? String
                             let id = item["id"] as? Int
+                            let picture = item["picture"] as? String
+
                             
-                            let artist = Artist(id: id!, name: name!)
+                            let artist = Artist(id: id!, name: name!, picture: picture!)
                             //print(artist)
                             self.artistsArray.append(artist)
                         }
@@ -97,7 +99,7 @@ class ApiManager {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         
-        let strUrl = "\(baseURL)album/\(id)"
+        let strUrl = "\(baseURL)artist/\(id)/albums"
         let url = URL(string: strUrl)!
         
         let task = session.dataTask(with: url) {
@@ -108,12 +110,12 @@ class ApiManager {
                 if let json = try? JSONSerialization.jsonObject(with: data!, options: []){
                     if let data = json as? [String:AnyObject] {
                         let trueData = data["data"] as? [[String:AnyObject]]
-                        //print(trueData)
                         for item in trueData! {
                             let id = item["id"] as? Int
                             let title = item["title"] as? String
+                            let cover = item["cover"] as? String
                             
-                            let myAlbum = Album(id: id!, name: title!)
+                            let myAlbum = Album(id: id!, name: title!, cover: cover!)
                             albumsArray.append(myAlbum)
                         }
                         completion(albumsArray, error)
@@ -174,11 +176,13 @@ class ApiManager {
 struct Album {
     var id: Int
     var name: String
+    var cover: String
 }
 
 struct Artist {
     var id: Int
     var name: String
+    var picture: String
 }
 
 struct Song {
