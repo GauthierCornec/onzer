@@ -60,8 +60,21 @@ class AlbumTableViewController: UITableViewController {
         
         cell.SongName.text = data[indexPath.row].title
         
-        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "player") as? PlayerViewController {
+            
+            vc.albumVariableCover = data[indexPath.row].albumImage
+            vc.trackVariablePreview = data[indexPath.row].preview
+            vc.trackVariableName = data[indexPath.row].title
+            vc.artistVariableName = data[indexPath.row].artistName
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
 
      
