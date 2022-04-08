@@ -238,9 +238,20 @@
                                     <constraint firstAttribute="height" constant="29" id="DF1-tq-9BJ"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="sliderDidSlide:" destination="fLT-rY-Nxb" eventType="valueChanged" id="IQV-Cg-MFN"/>
+                                    <action selector="sliderDidSlide:" destination="fLT-rY-Nxb" eventType="valueChanged" id="Ai4-Un-JVE"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdQ-qc-Hd3">
+                                <rect key="frame" x="365" y="328" width="40" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" image="arrowtriangle.forward.square.fill" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextTrack:" destination="fLT-rY-Nxb" eventType="touchUpInside" id="Nqa-RY-Z4J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d5a-DU-tWL"/>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
@@ -268,6 +279,7 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="UPO-I8-ouG"/>
                     <connections>
                         <outlet property="artistName" destination="OJh-8C-L2h" id="pDq-jV-saz"/>
+                        <outlet property="nextButton" destination="DdQ-qc-Hd3" id="4ul-Wt-uVb"/>
                         <outlet property="sliderVolume" destination="b8U-Di-hUB" id="aZq-b4-Kwr"/>
                         <outlet property="testuButton" destination="oOT-Po-DXL" id="8EE-5Q-5Bj"/>
                         <outlet property="trackCover" destination="rjp-qS-YvC" id="avq-RE-v22"/>
@@ -538,6 +550,7 @@
     <resources>
         <image name="acceuilIcon" width="32" height="32"/>
         <image name="albumTest" width="494" height="482"/>
+        <image name="arrowtriangle.forward.square.fill" catalog="system" width="128" height="114"/>
         <image name="logoAllonger" width="1220" height="424"/>
         <image name="searchIcon" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">

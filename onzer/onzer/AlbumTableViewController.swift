@@ -71,6 +71,7 @@ class AlbumTableViewController: UITableViewController {
             vc.trackVariablePreview = data[indexPath.row].preview
             vc.trackVariableName = data[indexPath.row].title
             vc.artistVariableName = data[indexPath.row].artistName
+            vc.arrayTracksAlbum = data
             
             self.navigationController?.pushViewController(vc, animated: true)
         }

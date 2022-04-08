@@ -14,10 +14,13 @@ class PlayerViewController: UIViewController {
     public var trackVariableName: String = ""
     public var trackVariablePreview: String = ""
     public var artistVariableName: String = ""
+    public var arrayTracksAlbum: [Song] = []
     
     @IBOutlet weak var testuButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var audioPlayer: AVPlayer?
+    var size: CGFloat = 50
     
     @IBOutlet weak var trackCover: UIImageView!
     @IBOutlet weak var trackTitle: UILabel!
@@ -60,4 +63,37 @@ class PlayerViewController: UIViewController {
         
     }
 
+    @IBAction func sliderDidSlide(_ sender: UISlider) {
+        let value = sender.value
+        audioPlayer?.volume = value
+    }
+    
+    @IBAction func nextTrack(_ sender: Any) {
+        let randomTrack = self.arrayTracksAlbum[Int.random(in: 0..<self.arrayTracksAlbum.count)]
+        
+        DispatchQueue.main.async {
+            self.trackTitle.text = randomTrack.title;
+            self.trackCover.image =  ApiManager().getImageFromUrl(urlStr: randomTrack.albumImage)
+            
+            guard let url = URL(string: randomTrack.preview) else {
+                print("error to get the mp3 file")
+                return
+            }
+            
+            do {
+                self.audioPlayer = try AVPlayer(url: url as URL)
+            } catch {
+                print("audio file error")
+            }
+            
+            if self.audioPlayer?.rate == 0
+                {
+                self.audioPlayer!.play()
+                self.testuButton.setImage(UIImage(systemName: "pause"), for: UIControl.State.normal)
+                } else {
+                    self.audioPlayer!.pause()
+                    self.testuButton.setImage(UIImage(systemName: "play"), for: UIControl.State.normal)
+                }
+        }
+    }
 }
